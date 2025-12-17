@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KINGS STORE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/cart.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="images/logo.png" class="logo-square">
+        <h1 class="site-title">KINGS STORE</h1>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- PRODUCT 1 -->
+    <div class="product-card">
+        <img src="images/product1.jpg">
+        <h2>Smart Bracelet</h2>
+        <p>Bluetooth fitness smart bracelet</p>
+        <p class="price">₦8,000</p>
+
+        <button onclick="addToCart('Smart Bracelet',8000,'images/product1.jpg')">
+            Add to Cart
+        </button>
+
+        <a class="buy-btn" href="https://paystack.com/pay/YOUR_LINK">
+            Buy Now
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    <a href="admin.html">Privacy Policy</a> |
+    <a href="cart.html">View Cart</a>
+</footer>
+
+</body>
+</html>
