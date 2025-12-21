@@ -1,19 +1,29 @@
-const list = document.getElementById("product-list");
+const productList = document.getElementById("product-list");
 
-products.forEach(p => {
-  list.innerHTML += `
-    <div class="product">
-      <img src="${p.image}">
-      <h3>${p.name}</h3>
-      <p>₦${p.price}</p>
-      <button onclick="addToCart(${p.id})">Add to Cart</button>
-    </div>
-  `;
-});
+function displayProducts() {
+  productList.innerHTML = "";
+
+  products.forEach(product => {
+    const div = document.createElement("div");
+    div.className = "product";
+
+    div.innerHTML = `
+      <img src="${product.image}">
+      <h3>${product.name}</h3>
+      <p>₦${product.price.toLocaleString()}</p>
+      <button onclick="addToCart(${product.id})">Add to Cart</button>
+    `;
+
+    productList.appendChild(div);
+  });
+}
 
 function addToCart(id) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.push(products.find(p => p.id === id));
+  const product = products.find(p => p.id === id);
+  cart.push(product);
   localStorage.setItem("cart", JSON.stringify(cart));
-  alert("Added to cart");
+  alert("Added to cart 🛒");
 }
+
+displayProducts();
