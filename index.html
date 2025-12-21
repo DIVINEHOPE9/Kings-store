@@ -3,43 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <title>King’s Store</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="logo-box">
-      <img src="images/logo.png" alt="Kings Store Logo" class="logo">
-      <span class="store-name">King’s Store</span>
-    </div>
+<header class="header">
+  <div class="logo-box">
+    <img src="images/logo.png" class="logo">
+    <span class="store-name">King’s Store</span>
+  </div>
 
-    <nav class="nav">
-      <a href="cart.html">🛒 Cart</a>
-      <a href="admin.html">Privacy Policy</a>
-    </nav>
-  </header>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="cart.html">Cart 🛒</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
 
-  <!-- MAIN CONTENT -->
-  <main>
-    <h2 class="section-title">Featured Products</h2>
+<!-- CATEGORIES -->
+<section class="categories">
+  <button onclick="filterCategory('all')">All</button>
+  <button onclick="filterCategory('electronics')">Electronics</button>
+  <button onclick="filterCategory('fashion')">Fashion</button>
+</section>
 
-    <div id="product-list" class="product-list">
-      <!-- Products load here from JS -->
-    </div>
-  </main>
+<h2 class="section-title">Products</h2>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2025 King’s Store. All rights reserved.</p>
-  </footer>
+<div id="product-list" class="product-list"></div>
 
-  <!-- JS -->
-  <script src="js/products.js"></script>
-  <script src="js/main.js"></script>
+<footer class="footer">
+  © 2025 King’s Store
+</footer>
+
+<!-- ⚠️ ORDER MATTERS -->
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
