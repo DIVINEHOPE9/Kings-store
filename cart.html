@@ -10,6 +10,19 @@
 
 <h1 style="text-align:center;">Your Cart</h1>
 
+    <h2>Your Cart</h2>
+<div id="cart-items"></div>
+<a href="checkout.html">Proceed to Checkout</a>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const box = document.getElementById("cart-items");
+
+cart.forEach(item => {
+  box.innerHTML += `<p>${item.name} - ₦${item.price}</p>`;
+});
+</script>
+
 <div id="cart-items" class="container"></div>
 
 <p style="text-align:center;">
