@@ -24,13 +24,13 @@ body {
   display: flex;
   align-items: center;
 }
-
 .logo {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   object-fit: cover;
-  margin-right: 10px;
 }
+
+
 
 .store-name {
   font-size: 20px;
