@@ -1,9 +1,9 @@
 const productList = document.getElementById("product-list");
 
-function displayProducts() {
+function displayProducts(list) {
   productList.innerHTML = "";
 
-  products.forEach(product => {
+  list.forEach(product => {
     const div = document.createElement("div");
     div.className = "product";
 
@@ -26,4 +26,13 @@ function addToCart(id) {
   alert("Added to cart 🛒");
 }
 
-displayProducts();
+function filterCategory(cat) {
+  if (cat === "all") {
+    displayProducts(products);
+  } else {
+    const filtered = products.filter(p => p.category === cat);
+    displayProducts(filtered);
+  }
+}
+
+displayProducts(products);
