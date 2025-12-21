@@ -97,3 +97,40 @@ body {
   color: white;
 }
 
+.cart-container {
+  padding: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.cart-item button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+.checkout-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #4b1fa6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
