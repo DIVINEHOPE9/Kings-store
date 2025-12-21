@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>KINGS STORE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>King’s Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/cart.js" defer></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<header class="header">
-  <div class="logo-box">
-    <img src="images/logo.png" alt="Kings Store Logo">
-    <span class="store-name">King’s Store</span>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-box">
+      <img src="images/logo.png" alt="Kings Store Logo" class="logo">
+      <span class="store-name">King’s Store</span>
+    </div>
 
+    <nav class="nav">
+      <a href="cart.html">🛒 Cart</a>
+      <a href="admin.html">Privacy Policy</a>
+    </nav>
+  </header>
 
-<main class="container">
+  <!-- MAIN CONTENT -->
+  <main>
+    <h2 class="section-title">Featured Products</h2>
 
-    <!-- PRODUCT 1 -->
-  <div id="product-list"></div>
-<script src="js/products.js"></script>
-<script src="js/main.js"></script>
-  
+    <div id="product-list" class="product-list">
+      <!-- Products load here from JS -->
+    </div>
+  </main>
 
-</main>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 King’s Store. All rights reserved.</p>
+  </footer>
 
-<footer>
-    <a href="admin.html">Privacy Policy</a> |
-    <a href="cart.html">View Cart</a>
-</footer>
+  <!-- JS -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
+
