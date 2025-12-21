@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Your Cart</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/cart.js" defer></script>
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+<body>
 
-<body onload="loadCart()">
+<header class="header">
+  <div class="logo-box">
+    <img src="images/logo.png" class="logo">
+    <span class="store-name">King’s Store</span>
+  </div>
+</header>
 
-<h1 style="text-align:center;">Your Cart</h1>
-
-    <h2>Your Cart</h2>
-<div id="cart-items"></div>
-<a href="checkout.html">Proceed to Checkout</a>
+<main class="section-title">
+  <h2>Your Cart</h2>
+  <div id="cart-items"></div>
+</main>
 
 <script>
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-const box = document.getElementById("cart-items");
+  const cartItems = document.getElementById("cart-items");
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-cart.forEach(item => {
-  box.innerHTML += `<p>${item.name} - ₦${item.price}</p>`;
-});
+  if (cart.length === 0) {
+    cartItems.innerHTML = "<p>Your cart is empty</p>";
+  } else {
+    cart.forEach(item => {
+      cartItems.innerHTML += `
+        <p>${item.name} - ₦${item.price.toLocaleString()}</p>
+      `;
+    });
+  }
 </script>
-
-<div id="cart-items" class="container"></div>
-
-<p style="text-align:center;">
-    <a href="index.html">← Continue Shopping</a>
-</p>
 
 </body>
 </html>
