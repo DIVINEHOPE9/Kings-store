@@ -1,14 +1,20 @@
 const products = [
   {
     id: 1,
-    name: "Smart Watch",
-    price: 8500,
-    image: "images/products/watch.jpg"
+    name: "Wireless Earbuds",
+    price: 15000,
+    image: "https://via.placeholder.com/300"
   },
   {
     id: 2,
-    name: "Wireless Earbuds",
-    price: 6500,
-    image: "images/products/earbuds.jpg"
+    name: "Smart Watch",
+    price: 22000,
+    image: "https://via.placeholder.com/300"
+  },
+  {
+    id: 3,
+    name: "Bluetooth Speaker",
+    price: 18000,
+    image: "https://via.placeholder.com/300"
   }
 ];
