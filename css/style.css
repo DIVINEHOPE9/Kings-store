@@ -5,31 +5,32 @@ body {
 }
 
 /* HEADER */
-header {
-    height: 100px;
-    background: black;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
+.header {
+  display: flex;
+  align-items: center;
+  background: #5b2d8b; /* purple like your logo */
+  height: 70px;
+  padding: 0 15px;
 }
 
-.header-left {
-    display: flex;
-    align-items: center;
+.logo-box {
+  display: flex;
+  align-items: center;
 }
 
-.logo-square {
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
-    margin-right: 15px;
+.logo-box img {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
 }
 
-.site-title {
-    color: #D4AF37;
-    font-size: 30px;
-    letter-spacing: 2px;
+.store-name {
+  color: #f7b500;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
 }
+
 
 /* PRODUCTS */
 .container {
